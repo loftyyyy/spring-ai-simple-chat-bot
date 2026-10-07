@@ -1,4 +1,5 @@
 package com.rho.rag.record;
 
-public class Question {
+public record Question(String question){
+
 }
