@@ -3,11 +3,13 @@ package com.rho.rag.service;
 import com.rho.rag.record.Answer;
 import com.rho.rag.record.Question;
 import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
 public class SpringAiBoardGameService implements BoardGameService{
     private final ChatClient chatClient;
+
 
     public SpringAiBoardGameService(ChatClient.Builder chatClientBuilder){
         this.chatClient = chatClientBuilder.build();
