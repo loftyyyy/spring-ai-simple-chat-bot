@@ -19,6 +19,7 @@ public class SpringAiBoardGameService implements BoardGameService{
                 .user(question.question())
                 .call()
                 .content();
+        System.out.println(answerText);
         return new Answer(answerText);
     }
 }
